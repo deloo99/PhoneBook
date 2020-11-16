@@ -183,5 +183,21 @@ namespace PhoneBook
                 Properties.Settings.Default.Save();
             }
         }
+
+        private void FindEmployee_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(FindEmployee.Text))
+            {
+                var findText = FindEmployee.Text.ToLower();
+
+                EmployeeListView.Items.Clear();
+                EmployeeListView.Items.AddRange(
+                _employeeList.Where(x => x.Contains(findText))
+                    .Select(x => new ListViewDataItem(x.SID, new string[] { x.FullName, x.Phone, x.MPersonPhone, x.СorporatPhone, x.Mail, x.Role }))
+                    .ToArray());
+            }
+            else
+                DepartmentPageView_SelectedPageChanged(DepartmentPageView, new EventArgs());
+        }
     }
 }

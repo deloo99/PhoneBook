@@ -133,6 +133,18 @@ namespace PhoneBook.Classes
             IsShow = GetPropertyAsInt("i_show") > 0;
         }
 
+
+        public bool Contains(string findText)
+            => (FullName?.ToLower().Contains(findText) ?? false)
+            || (Department?.ToLower().Contains(findText) ?? false)
+            || (Phone?.ToLower().Contains(findText) ?? false)
+            || (IpPhone?.ToLower().Contains(findText) ?? false)
+            || (MPersonPhone?.ToLower().Contains(findText) ?? false)
+            || (СorporatPhone?.ToLower().Contains(findText) ?? false)
+            || (Mail?.ToLower().Contains(findText) ?? false)
+            || (Role?.ToLower().Contains(findText) ?? false)
+            || (Company?.ToLower().Contains(findText) ?? false);
+
         public int ID { get; set; }
         public string SID { get; set; }
         public string Name { get; set; }

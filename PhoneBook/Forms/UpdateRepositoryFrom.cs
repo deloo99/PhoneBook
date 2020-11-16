@@ -39,6 +39,7 @@ namespace PhoneBook
             UpdateMSSQL.Checked = Properties.Settings.Default.UpdateMSSQL;
             UpdateSharePoint.Checked = Properties.Settings.Default.UpdateSharePoint;
             SaveUserAccount.Checked = Properties.Settings.Default.SaveUserAccount;
+            ContactPriority.Checked = Properties.Settings.Default.ContactPriority;
         }
         private void SPImportFrom_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -61,6 +62,7 @@ namespace PhoneBook
                 Properties.Settings.Default.UpdateMSSQL = UpdateMSSQL.Checked;
                 Properties.Settings.Default.UpdateSharePoint = UpdateSharePoint.Checked;
                 Properties.Settings.Default.SaveUserAccount = SaveUserAccount.Checked;
+                Properties.Settings.Default.ContactPriority = ContactPriority.Checked;
                 Properties.Settings.Default.Save();
 
                 Owner.Show();
@@ -69,6 +71,10 @@ namespace PhoneBook
         private void UpdateSharePoint_ToggleStateChanged(object sender, StateChangedEventArgs args)
         {
             SPUpdateSettings.Visible = UpdateSharePoint.Checked;
+        }
+        private void ContactPriority_ToggleStateChanged(object sender, StateChangedEventArgs args)
+        {
+            Properties.Settings.Default.ContactPriority = ContactPriority.Checked;
         }
         private void StartUpdate_Click(object sender, EventArgs e)
         {

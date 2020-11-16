@@ -35,6 +35,7 @@
             this.UpdateSharePoint = new Telerik.WinControls.UI.RadCheckBox();
             this.SPUpdateSettings = new Telerik.WinControls.UI.RadGroupBox();
             this.MainUpdateSettings = new Telerik.WinControls.UI.RadGroupBox();
+            this.ContactPriority = new Telerik.WinControls.UI.RadCheckBox();
             this.StartUpdate = new Telerik.WinControls.UI.RadButton();
             this.LogTextBox = new Telerik.WinControls.UI.RadTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.UserLogin)).BeginInit();
@@ -46,6 +47,7 @@
             this.SPUpdateSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainUpdateSettings)).BeginInit();
             this.MainUpdateSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ContactPriority)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StartUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -111,7 +113,7 @@
             this.SPUpdateSettings.Controls.Add(this.SaveUserAccount);
             this.SPUpdateSettings.Dock = System.Windows.Forms.DockStyle.Top;
             this.SPUpdateSettings.HeaderText = "Доступ к srv-shpf01 (PowerShell)";
-            this.SPUpdateSettings.Location = new System.Drawing.Point(0, 85);
+            this.SPUpdateSettings.Location = new System.Drawing.Point(0, 103);
             this.SPUpdateSettings.Name = "SPUpdateSettings";
             this.SPUpdateSettings.Size = new System.Drawing.Size(529, 93);
             this.SPUpdateSettings.TabIndex = 10;
@@ -121,6 +123,7 @@
             // MainUpdateSettings
             // 
             this.MainUpdateSettings.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.MainUpdateSettings.Controls.Add(this.ContactPriority);
             this.MainUpdateSettings.Controls.Add(this.UpdateMSSQL);
             this.MainUpdateSettings.Controls.Add(this.UpdateSharePoint);
             this.MainUpdateSettings.Controls.Add(this.StartUpdate);
@@ -128,10 +131,22 @@
             this.MainUpdateSettings.HeaderText = "Список хранилищ для обновления";
             this.MainUpdateSettings.Location = new System.Drawing.Point(0, 0);
             this.MainUpdateSettings.Name = "MainUpdateSettings";
-            this.MainUpdateSettings.Size = new System.Drawing.Size(529, 85);
+            this.MainUpdateSettings.Size = new System.Drawing.Size(529, 103);
             this.MainUpdateSettings.TabIndex = 11;
             this.MainUpdateSettings.Text = "Список хранилищ для обновления";
             this.MainUpdateSettings.ThemeName = "Material";
+            // 
+            // ContactPriority
+            // 
+            this.ContactPriority.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ContactPriority.Location = new System.Drawing.Point(26, 80);
+            this.ContactPriority.Name = "ContactPriority";
+            this.ContactPriority.Size = new System.Drawing.Size(472, 19);
+            this.ContactPriority.TabIndex = 10;
+            this.ContactPriority.Text = "Заменять \"Пользователя\" на \"Контакт\" при совпадении ФИО (AD)";
+            this.ContactPriority.ThemeName = "Material";
+            this.ContactPriority.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On;
+            this.ContactPriority.ToggleStateChanged += new Telerik.WinControls.UI.StateChangedEventHandler(this.ContactPriority_ToggleStateChanged);
             // 
             // StartUpdate
             // 
@@ -148,11 +163,11 @@
             // 
             this.LogTextBox.AutoSize = false;
             this.LogTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LogTextBox.Location = new System.Drawing.Point(0, 178);
+            this.LogTextBox.Location = new System.Drawing.Point(0, 196);
             this.LogTextBox.Multiline = true;
             this.LogTextBox.Name = "LogTextBox";
             this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogTextBox.Size = new System.Drawing.Size(529, 262);
+            this.LogTextBox.Size = new System.Drawing.Size(529, 244);
             this.LogTextBox.TabIndex = 13;
             this.LogTextBox.ThemeName = "Material";
             // 
@@ -186,6 +201,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MainUpdateSettings)).EndInit();
             this.MainUpdateSettings.ResumeLayout(false);
             this.MainUpdateSettings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ContactPriority)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StartUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogTextBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -204,5 +220,6 @@
         private Telerik.WinControls.UI.RadGroupBox MainUpdateSettings;
         private Telerik.WinControls.UI.RadButton StartUpdate;
         private Telerik.WinControls.UI.RadTextBox LogTextBox;
+        private Telerik.WinControls.UI.RadCheckBox ContactPriority;
     }
 }

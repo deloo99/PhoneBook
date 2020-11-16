@@ -59,6 +59,7 @@
             this.radMenuButtonItem2 = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.radMenuButtonItem1 = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.materialPinkTheme1 = new Telerik.WinControls.Themes.MaterialPinkTheme();
+            this.FindEmployee = new Telerik.WinControls.UI.RadTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CompanyPageView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepartmentPageView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeListView)).BeginInit();
@@ -66,6 +67,8 @@
             this.HeaderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HeaderDescription)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
+            this.radMenu1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FindEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -217,6 +220,7 @@
             // 
             // radMenu1
             // 
+            this.radMenu1.Controls.Add(this.FindEmployee);
             this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.UpdateEmployeList,
             this.AdminMenu,
@@ -283,6 +287,16 @@
             this.radMenuButtonItem1.Text = "radMenuButtonItem1";
             this.radMenuButtonItem1.UseCompatibleTextRendering = false;
             // 
+            // FindEmployee
+            // 
+            this.FindEmployee.Location = new System.Drawing.Point(1126, 0);
+            this.FindEmployee.Name = "FindEmployee";
+            this.FindEmployee.NullText = "Поиск сотрудника...";
+            this.FindEmployee.Size = new System.Drawing.Size(280, 36);
+            this.FindEmployee.TabIndex = 0;
+            this.FindEmployee.ThemeName = "Material";
+            this.FindEmployee.TextChanged += new System.EventHandler(this.FindEmployee_TextChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -306,6 +320,9 @@
             this.HeaderPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HeaderDescription)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
+            this.radMenu1.ResumeLayout(false);
+            this.radMenu1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FindEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -337,5 +354,6 @@
         private Telerik.WinControls.UI.RadMenuItem TealTheme;
         private Telerik.WinControls.UI.RadMenuItem PinkTheme;
         private Telerik.WinControls.Themes.MaterialPinkTheme materialPinkTheme1;
+        private Telerik.WinControls.UI.RadTextBox FindEmployee;
     }
 }
