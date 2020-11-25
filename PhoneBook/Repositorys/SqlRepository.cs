@@ -42,7 +42,7 @@ namespace PhoneBook.Repositorys
                 $", {NormalizeString(employee.Phone)}" +
                 $", {NormalizeString(employee.IpPhone)}" +
                 $", {NormalizeString(employee.MPersonPhone)}" +
-                $", {NormalizeString(employee.СorporatPhone)}" +
+                $", {NormalizeString(employee.СorporatePhone)}" +
                 $", {NormalizeString(employee.Mail)}" +
                 $", {NormalizeString(employee.Role)}" +
                 $", {NormalizeString(employee.Department)}" +
@@ -64,7 +64,7 @@ namespace PhoneBook.Repositorys
                 $", Phone = {NormalizeString(employee.Phone)}" +
                 $", IpPhone = {NormalizeString(employee.IpPhone)}" +
                 $", MPersonPhone = {NormalizeString(employee.MPersonPhone)}" +
-                $", СorporatPhone = {NormalizeString(employee.СorporatPhone)}" +
+                $", СorporatPhone = {NormalizeString(employee.СorporatePhone)}" +
                 $", Mail = {NormalizeString(employee.Mail)}" +
                 $", Role = {NormalizeString(employee.Role)}" +
                 $", Department = {NormalizeString(employee.Department)}" +

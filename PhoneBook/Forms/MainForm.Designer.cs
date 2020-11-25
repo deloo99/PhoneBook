@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn7 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 0", "ФИО");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn8 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 1", "Внутренний");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn9 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 2", "Городской");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn10 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 3", "Мобильный");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn11 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 4", "Электронная почта");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn12 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 5", "Должность");
-            Telerik.WinControls.UI.ListViewDataItem listViewDataItem2 = new Telerik.WinControls.UI.ListViewDataItem("ListViewItem 1");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn1 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 0", "ФИО");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn2 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 1", "Внутренний");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn3 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 2", "Городской");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn4 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 3", "Мобильный");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn5 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 4", "Электронная почта");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn6 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 5", "Должность");
+            Telerik.WinControls.UI.ListViewDataItem listViewDataItem1 = new Telerik.WinControls.UI.ListViewDataItem("ListViewItem 1");
             this.materialTheme1 = new Telerik.WinControls.Themes.MaterialTheme();
             this.CompanyPageView = new Telerik.WinControls.UI.RadPageView();
             this.DepartmentPageView = new Telerik.WinControls.UI.RadPageView();
@@ -50,7 +50,10 @@
             this.GetSqlEmployeeList = new Telerik.WinControls.UI.RadMenuItem();
             this.GetSPEmployeeList = new Telerik.WinControls.UI.RadMenuItem();
             this.GetADEmployeeList = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuSeparatorItem2 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
+            this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
+            this.FindEmployee = new Telerik.WinControls.UI.RadTextBox();
             this.SelectThemeMenu = new Telerik.WinControls.UI.RadMenuItem();
             this.DefaultTheme = new Telerik.WinControls.UI.RadMenuItem();
             this.BlueGrayTheme = new Telerik.WinControls.UI.RadMenuItem();
@@ -59,7 +62,6 @@
             this.radMenuButtonItem2 = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.radMenuButtonItem1 = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.materialPinkTheme1 = new Telerik.WinControls.Themes.MaterialPinkTheme();
-            this.FindEmployee = new Telerik.WinControls.UI.RadTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CompanyPageView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepartmentPageView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeListView)).BeginInit();
@@ -104,30 +106,30 @@
             this.EmployeeListView.AllowColumnReorder = false;
             this.EmployeeListView.AllowEdit = false;
             this.EmployeeListView.AllowRemove = false;
-            listViewDetailColumn7.HeaderText = "ФИО";
-            listViewDetailColumn7.Width = 280F;
-            listViewDetailColumn8.HeaderText = "Внутренний";
-            listViewDetailColumn8.Width = 120F;
-            listViewDetailColumn9.HeaderText = "Городской";
-            listViewDetailColumn9.Width = 150F;
-            listViewDetailColumn10.HeaderText = "Мобильный";
-            listViewDetailColumn10.Width = 150F;
-            listViewDetailColumn11.HeaderText = "Электронная почта";
-            listViewDetailColumn12.HeaderText = "Должность";
-            listViewDetailColumn12.Width = 300F;
+            listViewDetailColumn1.HeaderText = "ФИО";
+            listViewDetailColumn1.Width = 280F;
+            listViewDetailColumn2.HeaderText = "Внутренний";
+            listViewDetailColumn2.Width = 120F;
+            listViewDetailColumn3.HeaderText = "Городской";
+            listViewDetailColumn3.Width = 150F;
+            listViewDetailColumn4.HeaderText = "Мобильный";
+            listViewDetailColumn4.Width = 150F;
+            listViewDetailColumn5.HeaderText = "Электронная почта";
+            listViewDetailColumn6.HeaderText = "Должность";
+            listViewDetailColumn6.Width = 300F;
             this.EmployeeListView.Columns.AddRange(new Telerik.WinControls.UI.ListViewDetailColumn[] {
-            listViewDetailColumn7,
-            listViewDetailColumn8,
-            listViewDetailColumn9,
-            listViewDetailColumn10,
-            listViewDetailColumn11,
-            listViewDetailColumn12});
+            listViewDetailColumn1,
+            listViewDetailColumn2,
+            listViewDetailColumn3,
+            listViewDetailColumn4,
+            listViewDetailColumn5,
+            listViewDetailColumn6});
             this.EmployeeListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmployeeListView.EnableSorting = true;
             this.EmployeeListView.GroupItemSize = new System.Drawing.Size(200, 32);
-            listViewDataItem2.Text = "ListViewItem 1";
+            listViewDataItem1.Text = "ListViewItem 1";
             this.EmployeeListView.Items.AddRange(new Telerik.WinControls.UI.ListViewDataItem[] {
-            listViewDataItem2});
+            listViewDataItem1});
             this.EmployeeListView.ItemSize = new System.Drawing.Size(200, 32);
             this.EmployeeListView.ItemSpacing = -1;
             this.EmployeeListView.Location = new System.Drawing.Point(200, 89);
@@ -184,7 +186,9 @@
             this.radMenuSeparatorItem1,
             this.GetSqlEmployeeList,
             this.GetSPEmployeeList,
-            this.GetADEmployeeList});
+            this.GetADEmployeeList,
+            this.radMenuSeparatorItem2,
+            this.radMenuItem1});
             this.AdminMenu.Name = "AdminMenu";
             this.AdminMenu.Text = "        Администратор";
             // 
@@ -218,6 +222,18 @@
             this.GetADEmployeeList.Text = "Использовать данные из Active Directory";
             this.GetADEmployeeList.Click += new System.EventHandler(this.GetEmployeeList_Click);
             // 
+            // radMenuSeparatorItem2
+            // 
+            this.radMenuSeparatorItem2.Name = "radMenuSeparatorItem2";
+            this.radMenuSeparatorItem2.Text = "radMenuSeparatorItem2";
+            this.radMenuSeparatorItem2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // radMenuItem1
+            // 
+            this.radMenuItem1.Name = "radMenuItem1";
+            this.radMenuItem1.Text = "Сохранить в файл";
+            this.radMenuItem1.Click += new System.EventHandler(this.ImportToCSVClick);
+            // 
             // radMenu1
             // 
             this.radMenu1.Controls.Add(this.FindEmployee);
@@ -231,8 +247,20 @@
             this.radMenu1.TabIndex = 11;
             this.radMenu1.ThemeName = "Material";
             // 
+            // FindEmployee
+            // 
+            this.FindEmployee.Location = new System.Drawing.Point(1126, 0);
+            this.FindEmployee.Name = "FindEmployee";
+            this.FindEmployee.NullText = "Поиск сотрудника...";
+            this.FindEmployee.Size = new System.Drawing.Size(280, 36);
+            this.FindEmployee.TabIndex = 0;
+            this.FindEmployee.ThemeName = "Material";
+            this.FindEmployee.TextChanged += new System.EventHandler(this.FindEmployee_TextChanged);
+            // 
             // SelectThemeMenu
             // 
+            this.SelectThemeMenu.AutoSize = false;
+            this.SelectThemeMenu.Bounds = new System.Drawing.Rectangle(0, 0, 200, 35);
             this.SelectThemeMenu.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.DefaultTheme,
             this.BlueGrayTheme,
@@ -286,16 +314,6 @@
             this.radMenuButtonItem1.Name = "radMenuButtonItem1";
             this.radMenuButtonItem1.Text = "radMenuButtonItem1";
             this.radMenuButtonItem1.UseCompatibleTextRendering = false;
-            // 
-            // FindEmployee
-            // 
-            this.FindEmployee.Location = new System.Drawing.Point(1126, 0);
-            this.FindEmployee.Name = "FindEmployee";
-            this.FindEmployee.NullText = "Поиск сотрудника...";
-            this.FindEmployee.Size = new System.Drawing.Size(280, 36);
-            this.FindEmployee.TabIndex = 0;
-            this.FindEmployee.ThemeName = "Material";
-            this.FindEmployee.TextChanged += new System.EventHandler(this.FindEmployee_TextChanged);
             // 
             // MainForm
             // 
@@ -355,5 +373,7 @@
         private Telerik.WinControls.UI.RadMenuItem PinkTheme;
         private Telerik.WinControls.Themes.MaterialPinkTheme materialPinkTheme1;
         private Telerik.WinControls.UI.RadTextBox FindEmployee;
+        private Telerik.WinControls.UI.RadMenuSeparatorItem radMenuSeparatorItem2;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem1;
     }
 }

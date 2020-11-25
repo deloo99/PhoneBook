@@ -37,7 +37,7 @@ namespace PhoneBook.Repositorys
                 $"<Field Name='ph'>{employee.Phone}</Field>" +
                 $"<Field Name='ph_ip'>{employee.IpPhone}</Field>" +
                 $"<Field Name='ph_MPerson'>{employee.MPersonPhone}</Field>" +
-                $"<Field Name='ph_MCorp'>{employee.СorporatPhone}</Field>" +
+                $"<Field Name='ph_MCorp'>{employee.СorporatePhone}</Field>" +
                 $"<Field Name='Mail'>{employee.Mail}</Field>" +
                 $"<Field Name='Role'>{employee.Role}</Field>" +
                 $"<Field Name='Department'>{employee.Department?.Replace("\"", "&quot;") ?? null}</Field>" +
@@ -60,7 +60,7 @@ namespace PhoneBook.Repositorys
                 $"<Field Name='ph'>{employee.Phone}</Field>" +
                 $"<Field Name='ph_ip'>{employee.IpPhone}</Field>" +
                 $"<Field Name='ph_MPerson'>{employee.MPersonPhone}</Field>" +
-                $"<Field Name='ph_MCorp'>{employee.СorporatPhone}</Field>" +
+                $"<Field Name='ph_MCorp'>{employee.СorporatePhone}</Field>" +
                 $"<Field Name='Mail'>{employee.Mail}</Field>" +
                 $"<Field Name='Role'>{employee.Role}</Field>" +
                 $"<Field Name='Department'>{employee.Department?.Replace("\"", "&quot;") ?? null}</Field>" +

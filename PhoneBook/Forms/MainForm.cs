@@ -3,7 +3,9 @@ using PhoneBook.Repositorys;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.Enumerations;
@@ -121,7 +123,7 @@ namespace PhoneBook
                 EmployeeListView.Items.AddRange(
                 _employeeList.Where(x => x.Company == CompanyPageView.SelectedPage.Text
                     && x.Department == DepartmentPageView.SelectedPage.Tag.ToString())
-                    .Select(x => new ListViewDataItem(x.SID, new string[] { x.FullName, x.Phone, x.MPersonPhone, x.СorporatPhone, x.Mail, x.Role }))
+                    .Select(x => new ListViewDataItem(x.SID, new string[] { x.FullName, x.Phone, x.MPersonPhone, x.СorporatePhone, x.Mail, x.Role }))
                     .ToArray());
             }
         }
@@ -193,11 +195,28 @@ namespace PhoneBook
                 EmployeeListView.Items.Clear();
                 EmployeeListView.Items.AddRange(
                 _employeeList.Where(x => x.Contains(findText))
-                    .Select(x => new ListViewDataItem(x.SID, new string[] { x.FullName, x.Phone, x.MPersonPhone, x.СorporatPhone, x.Mail, x.Role }))
+                    .Select(x => new ListViewDataItem(x.SID, new string[] { x.FullName, x.Phone, x.MPersonPhone, x.СorporatePhone, x.Mail, x.Role }))
                     .ToArray());
             }
             else
                 DepartmentPageView_SelectedPageChanged(DepartmentPageView, new EventArgs());
+        }
+
+        private void ImportToCSVClick(object sender, EventArgs e)
+        {
+            using var saveDialog = new SaveFileDialog
+            {
+                Filter = "CSV файл(*.csv)|*.csv|Текстовый файл(*.txt)|*.txt"
+            };
+            if (saveDialog.ShowDialog() == DialogResult.OK)
+            {
+                var employeeProperties = Type.GetType("PhoneBook.Classes.Employee").GetProperties();
+                var header = string.Join(";", employeeProperties.Select(x => "\"" + x.Name + "\""));
+                var body = string.Join("\r\n", _employeeList.Select(x => string.Join(";", employeeProperties
+                    .Select(y => "\"" + y.GetValue(x, null)?.ToString().Replace("\"", "\"\"") + "\""))));
+
+                File.WriteAllText(saveDialog.FileName, header + "\r\n" + body + "\r\n", Encoding.GetEncoding("Windows-1251"));
+            }
         }
     }
 }

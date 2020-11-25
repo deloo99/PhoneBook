@@ -58,7 +58,7 @@ namespace PhoneBook.Classes
             Phone = GetPropertyAsString("telephoneNumber");
             IpPhone = GetPropertyAsString("ipPhone");
             MPersonPhone = GetPropertyAsString("pager");
-            СorporatPhone = GetPropertyAsString("mobile");
+            СorporatePhone = GetPropertyAsString("mobile");
             Mail = GetPropertyAsString("mail");
             Role = GetPropertyAsString("title");
             Department = GetPropertyAsString("department");
@@ -85,7 +85,7 @@ namespace PhoneBook.Classes
             Phone = GetStringOrNull(5);
             IpPhone = GetStringOrNull(6);
             MPersonPhone = GetStringOrNull(7);
-            СorporatPhone = GetStringOrNull(8);
+            СorporatePhone = GetStringOrNull(8);
             Mail = GetStringOrNull(9);
             Role = GetStringOrNull(10);
             Department = GetStringOrNull(11);
@@ -118,7 +118,7 @@ namespace PhoneBook.Classes
             Phone = GetPropertyAsString("ph");
             IpPhone = GetPropertyAsString("ph_ip");
             MPersonPhone = GetPropertyAsString("ph_MPerson");
-            СorporatPhone = GetPropertyAsString("ph_MCorp");
+            СorporatePhone = GetPropertyAsString("ph_MCorp");
             Mail = GetPropertyAsString("Mail");
             Role = GetPropertyAsString("Role");
             Department = GetPropertyAsString("Department")?.Replace("&quot;", "\"") ?? null;
@@ -140,7 +140,7 @@ namespace PhoneBook.Classes
             || (Phone?.ToLower().Contains(findText) ?? false)
             || (IpPhone?.ToLower().Contains(findText) ?? false)
             || (MPersonPhone?.ToLower().Contains(findText) ?? false)
-            || (СorporatPhone?.ToLower().Contains(findText) ?? false)
+            || (СorporatePhone?.ToLower().Contains(findText) ?? false)
             || (Mail?.ToLower().Contains(findText) ?? false)
             || (Role?.ToLower().Contains(findText) ?? false)
             || (Company?.ToLower().Contains(findText) ?? false);
@@ -153,7 +153,7 @@ namespace PhoneBook.Classes
         public string Phone { get; set; }
         public string IpPhone { get; set; }
         public string MPersonPhone { get; set; }
-        public string СorporatPhone { get; set; }
+        public string СorporatePhone { get; set; }
         public string Mail { get; set; }
         public string Role { get; set; }
         public string Department { get; set; }
@@ -177,7 +177,7 @@ namespace PhoneBook.Classes
                 && employee.Phone == Phone
                 && employee.IpPhone == IpPhone
                 && employee.MPersonPhone == MPersonPhone
-                && employee.СorporatPhone == СorporatPhone
+                && employee.СorporatePhone == СorporatePhone
                 && employee.Mail == Mail
                 && employee.Role == Role
                 && employee.Department == Department
