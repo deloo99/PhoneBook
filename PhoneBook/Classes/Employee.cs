@@ -115,7 +115,7 @@ namespace PhoneBook.Classes
             Name = GetPropertyAsString("Name");
             Surname = GetPropertyAsString("Surname");
             FullName = GetPropertyAsString("FullName");
-            Phone = GetPropertyAsString("ph");
+            Phone = GetPropertyAsString("Phone");
             IpPhone = GetPropertyAsString("ph_ip");
             MPersonPhone = GetPropertyAsString("ph_MPerson");
             СorporatePhone = GetPropertyAsString("ph_MCorp");
@@ -123,7 +123,7 @@ namespace PhoneBook.Classes
             Role = GetPropertyAsString("Role");
             Department = GetPropertyAsString("Department")?.Replace("&quot;", "\"") ?? null;
             Company = GetPropertyAsString("Company")?.Replace("&quot;", "\"") ?? null;
-            Description = GetPropertyAsString("Description");
+            Description = GetPropertyAsString("Description")?.Replace("&quot;", "\"") ?? null;
             City = GetPropertyAsString("City");
             Office = GetPropertyAsString("Office");
             PostalCode = GetPropertyAsString("PostalCode");
