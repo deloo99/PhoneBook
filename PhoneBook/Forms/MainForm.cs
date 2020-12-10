@@ -53,6 +53,7 @@ namespace PhoneBook
             _employeeList = GetEmployeeList().Select(x => Normalize(x))
                  .OrderBy(x => x.Company).ThenBy(x => x.Department).ThenBy(x => x.FullName).ToList();
 
+            FindEmployee.Clear();
             CompanyPageView.Pages.Clear();
             _employeeList.GroupBy(x => x.Company).ToList().ForEach(x => CompanyPageView.Pages.Add(new RadPageViewPage(x.Key)));
         }
@@ -117,6 +118,9 @@ namespace PhoneBook
         }
         private void DepartmentPageView_SelectedPageChanged(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(FindEmployee.Text))
+                return;
+
             EmployeeListView.Items.Clear();
             if (CompanyPageView.SelectedPage != null && DepartmentPageView.SelectedPage != null)
             {
@@ -166,7 +170,6 @@ namespace PhoneBook
                 menuItem.ToggleState = ToggleState.On;
             }
         }
-
         private void SelectTheme_Click(object sender, EventArgs e)
         {
             if (sender is RadMenuItem menuItem)
@@ -185,7 +188,6 @@ namespace PhoneBook
                 Properties.Settings.Default.Save();
             }
         }
-
         private void FindEmployee_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(FindEmployee.Text))
@@ -201,7 +203,6 @@ namespace PhoneBook
             else
                 DepartmentPageView_SelectedPageChanged(DepartmentPageView, new EventArgs());
         }
-
         private void ImportToCSVClick(object sender, EventArgs e)
         {
             using var saveDialog = new SaveFileDialog
@@ -216,6 +217,16 @@ namespace PhoneBook
                     .Select(y => "\"" + y.GetValue(x, null)?.ToString().Replace("\"", "\"\"") + "\""))));
 
                 File.WriteAllText(saveDialog.FileName, header + "\r\n" + body + "\r\n", Encoding.GetEncoding("Windows-1251"));
+            }
+        }
+
+        private void EmployeeListView_SelectedItemChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(FindEmployee.Text) && EmployeeListView.SelectedItem != null)
+            {
+                var employee = _employeeList.First(x => x.SID == EmployeeListView.SelectedItem.Text);
+                CompanyPageView.SelectedPage = CompanyPageView.Pages.FirstOrDefault(x => x.Text == employee.Company);
+                DepartmentPageView.SelectedPage = DepartmentPageView.Pages.FirstOrDefault(x => x.Text.Replace("\r\n", "") == employee.Department);
             }
         }
     }
