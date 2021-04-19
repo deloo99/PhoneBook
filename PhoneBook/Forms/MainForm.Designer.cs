@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn7 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 0", "ФИО");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn8 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 1", "Внутренний");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn9 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 2", "Городской");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn10 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 3", "Мобильный");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn11 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 4", "Электронная почта");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn12 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 5", "Должность");
-            Telerik.WinControls.UI.ListViewDataItem listViewDataItem2 = new Telerik.WinControls.UI.ListViewDataItem("ListViewItem 1");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn1 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 0", "ФИО");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn2 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 1", "Внутренний");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn3 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 2", "Городской");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn4 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 3", "Мобильный");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn5 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 4", "Электронная почта");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn6 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 5", "Должность");
+            Telerik.WinControls.UI.ListViewDataItem listViewDataItem1 = new Telerik.WinControls.UI.ListViewDataItem("ListViewItem 1");
             this.materialTheme1 = new Telerik.WinControls.Themes.MaterialTheme();
             this.CompanyPageView = new Telerik.WinControls.UI.RadPageView();
             this.DepartmentPageView = new Telerik.WinControls.UI.RadPageView();
@@ -106,30 +106,30 @@
             this.EmployeeListView.AllowColumnReorder = false;
             this.EmployeeListView.AllowEdit = false;
             this.EmployeeListView.AllowRemove = false;
-            listViewDetailColumn7.HeaderText = "ФИО";
-            listViewDetailColumn7.Width = 280F;
-            listViewDetailColumn8.HeaderText = "Внутренний";
-            listViewDetailColumn8.Width = 120F;
-            listViewDetailColumn9.HeaderText = "Городской";
-            listViewDetailColumn9.Width = 150F;
-            listViewDetailColumn10.HeaderText = "Мобильный";
-            listViewDetailColumn10.Width = 150F;
-            listViewDetailColumn11.HeaderText = "Электронная почта";
-            listViewDetailColumn12.HeaderText = "Должность";
-            listViewDetailColumn12.Width = 300F;
+            listViewDetailColumn1.HeaderText = "ФИО";
+            listViewDetailColumn1.Width = 280F;
+            listViewDetailColumn2.HeaderText = "Внутренний";
+            listViewDetailColumn2.Width = 120F;
+            listViewDetailColumn3.HeaderText = "Городской";
+            listViewDetailColumn3.Width = 150F;
+            listViewDetailColumn4.HeaderText = "Мобильный";
+            listViewDetailColumn4.Width = 150F;
+            listViewDetailColumn5.HeaderText = "Электронная почта";
+            listViewDetailColumn6.HeaderText = "Должность";
+            listViewDetailColumn6.Width = 300F;
             this.EmployeeListView.Columns.AddRange(new Telerik.WinControls.UI.ListViewDetailColumn[] {
-            listViewDetailColumn7,
-            listViewDetailColumn8,
-            listViewDetailColumn9,
-            listViewDetailColumn10,
-            listViewDetailColumn11,
-            listViewDetailColumn12});
+            listViewDetailColumn1,
+            listViewDetailColumn2,
+            listViewDetailColumn3,
+            listViewDetailColumn4,
+            listViewDetailColumn5,
+            listViewDetailColumn6});
             this.EmployeeListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmployeeListView.EnableSorting = true;
             this.EmployeeListView.GroupItemSize = new System.Drawing.Size(200, 32);
-            listViewDataItem2.Text = "ListViewItem 1";
+            listViewDataItem1.Text = "ListViewItem 1";
             this.EmployeeListView.Items.AddRange(new Telerik.WinControls.UI.ListViewDataItem[] {
-            listViewDataItem2});
+            listViewDataItem1});
             this.EmployeeListView.ItemSize = new System.Drawing.Size(200, 32);
             this.EmployeeListView.ItemSpacing = -1;
             this.EmployeeListView.Location = new System.Drawing.Point(200, 89);
